@@ -178,8 +178,8 @@ def main(username,password,start_key,duration:int):
             
          
 if __name__ == '__main__':
-    username = input('请输入用户名(手机号):')
-    password = getpass.getpass('请输入密码:')
+    username = input('请输入用户名(手机号):')#聚水潭账号
+    password = getpass.getpass('请输入密码:')#聚水潭密码
     start_key = getpass.getpass('请输入密钥:')#密钥默认设置为: xxxx(4个x)
     duration = int(input('请输入需要监测的时间间隔(目前只支持10分钟以上):'))
     main(username=username,password=password,start_key=start_key,duration=duration)
