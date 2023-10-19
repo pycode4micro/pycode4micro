@@ -11,8 +11,8 @@ from danmuyj import *
 
 
 '''
-
-
+该文件默认无头
+下载danmuyi.py和该文件同一路径
 确保自己的电脑有E盘
 确保desktop上级是管理员,如果不是管理员需要修改路径
 
@@ -151,7 +151,7 @@ def out_activity():#退出仓库活动页面
 
 #     return df_finally
 def main(username,password,start_key,duration:int):
-    if start_key != 'qianxi2023':
+    if start_key != 'xxxx':
         print('请联系管理员获取密钥,程序将在3秒后退出')
         exit(3)
     else:
@@ -180,7 +180,7 @@ def main(username,password,start_key,duration:int):
 if __name__ == '__main__':
     username = input('请输入用户名(手机号):')
     password = getpass.getpass('请输入密码:')
-    start_key = getpass.getpass('请输入密钥:')
+    start_key = getpass.getpass('请输入密钥:')#密钥默认设置为: xxxx(4个x)
     duration = int(input('请输入需要监测的时间间隔(目前只支持10分钟以上):'))
     main(username=username,password=password,start_key=start_key,duration=duration)
     
