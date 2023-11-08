@@ -5,6 +5,7 @@ from appium import webdriver
 '''
 
 appium操作自动添加微信好友
+本人注释一般写于代码右侧,除非该写法由于代码过长不利于阅读,才写在代码上方
 
 
 '''
@@ -29,6 +30,7 @@ driver = webdriver.Remote("http://localhost:4723/wd/hub", caps) # 启动app
 time.sleep(10)
 driver.find_element_by_id('com.tencent.mm:id/hy6').click()
 time.sleep(3)
+#未找到合适的id只能使用xpath更建议使用byid
 driver.find_element_by_xpath('''/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView''').click()
 time.sleep(3)
 driver.find_element_by_id('com.tencent.mm:id/jcd').click()
@@ -43,14 +45,14 @@ for i in list_:
     driver.find_element_by_id('com.tencent.mm:id/j63').click()#点击搜索
     time.sleep(5)
     el = driver.find_element_by_id('com.tencent.mm:id/khj')
-    if el.text == '添加到通讯录':
+    if el.text == '添加到通讯录':#该id选择在不用结果下都对应一个节点,因此使用判断避免报错
         el.click()
         time.sleep(3)
     else:
-        driver.find_element_by_id('com.tencent.mm:id/g0').click()
+        driver.find_element_by_id('com.tencent.mm:id/g0').click()#点击返回按钮
         continue
 
     swipe_up(0.2)
-    driver.find_element_by_id('com.tencent.mm:id/e9q').click()
+    driver.find_element_by_id('com.tencent.mm:id/e9q').click()#发送按钮
     time.sleep(10)
-    driver.find_element_by_id('com.tencent.mm:id/g1').click()
+    driver.find_element_by_id('com.tencent.mm:id/g1').click()#返回按钮
