@@ -10,7 +10,7 @@ appium操作自动添加微信好友
 
 '''
 
-list_ = ['RichH-113',17636611614]
+list_ = ['手机号','微信号']#手机号码或微信号,列表(可遍历的对象就行)
 caps = {
 "platformName": "Android", # 声明是ios还是Android系统
 "platformVersion": "7.1.2", # Android内核版本号
