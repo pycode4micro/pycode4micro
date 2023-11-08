@@ -13,3 +13,10 @@ python脚本需要appium-python-client(建议安装2.0)
 		build-tools
 	默认安装api
 使用夜神模拟器
+
+jdk:jdk8
+apc:2.0
+android studio&sdk:newest version
+nox(夜神):newest version
+python:3.11
+
